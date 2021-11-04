@@ -1,0 +1,558 @@
+DIGEST ad1f73078d95e86228a00296bbbc79ac
+Fcoq_intro.b1
+R228:231 Coq.Lists.List <> <> lib
+sec 392:396 <> NatEq
+def 531:536 <> nat_eq
+R544:546 Coq.Init.Datatypes <> nat ind
+binder 539:539 <> x:1
+binder 541:541 <> y:2
+R550:553 Coq.Init.Datatypes <> bool ind
+R573:573 coq_intro.b1 <> y:2 var
+R570:570 coq_intro.b1 <> x:1 var
+R595:598 Coq.Init.Datatypes <> true constr
+R615:619 Coq.Init.Datatypes <> false constr
+R636:640 Coq.Init.Datatypes <> false constr
+R649:649 Coq.Init.Datatypes <> S constr
+R655:655 Coq.Init.Datatypes <> S constr
+R663:668 coq_intro.b1 <> nat_eq:3 def
+R1068:1074 Coq.Lists.List <> forallb def
+var 1084:1095 NatEq nat_eq_tests
+R1100:1106 Coq.Lists.List <> forallb def
+R1134:1135 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1146:1172 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1190:1216 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1235:1261 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1274:1300 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1320:1321 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1136:1141 coq_intro.b1 <> nat_eq def
+R1173:1176 Coq.Init.Datatypes <> negb def
+R1179:1184 coq_intro.b1 <> nat_eq def
+R1217:1220 Coq.Init.Datatypes <> negb def
+R1223:1228 coq_intro.b1 <> nat_eq def
+R1262:1267 coq_intro.b1 <> nat_eq def
+R1301:1304 Coq.Init.Datatypes <> negb def
+R1307:1312 coq_intro.b1 <> nat_eq def
+R1108:1109 Coq.Init.Datatypes <> id def
+var 1518:1534 NatEq nat_eq_tests_pass
+R1549:1551 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1537:1548 coq_intro.b1 <> NatEq.nat_eq_tests var
+R1552:1555 Coq.Init.Datatypes <> true constr
+R1765:1769 coq_intro.b1 NatEq <> sec
+R1853:1858 coq_intro.b1 <> nat_eq def
+sec 1871:1876 <> Option
+R2028:2033 Coq.Init.Datatypes <> option ind
+def 2386:2393 <> has_some
+binder 2396:2396 <> A:6
+R2409:2414 Coq.Init.Datatypes <> option ind
+R2416:2416 coq_intro.b1 <> A:6 var
+binder 2406:2406 <> o:7
+R2421:2424 Coq.Init.Datatypes <> bool ind
+R2437:2437 coq_intro.b1 <> o:7 var
+R2454:2458 Coq.Init.Datatypes <> false constr
+R2444:2447 Coq.Init.Datatypes <> true constr
+var 2541:2554 Option has_some_tests
+R2559:2565 Coq.Lists.List <> forallb def
+R2593:2695 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2713:2836 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2864:2890 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2919:2943 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2696:2703 coq_intro.b1 <> has_some def
+R2706:2709 Coq.Init.Datatypes <> Some constr
+R2837:2840 Coq.Init.Datatypes <> negb def
+R2843:2850 coq_intro.b1 <> has_some def
+R2854:2857 Coq.Init.Datatypes <> None constr
+R2859:2861 Coq.Init.Datatypes <> nat ind
+R2891:2898 coq_intro.b1 <> has_some def
+R2901:2904 Coq.Init.Datatypes <> Some constr
+R2908:2911 Coq.Init.Datatypes <> None constr
+R2913:2916 Coq.Init.Datatypes <> bool ind
+R2567:2568 Coq.Init.Datatypes <> id def
+var 2955:2973 Option has_some_tests_pass
+R2990:2992 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2976:2989 coq_intro.b1 <> Option.has_some_tests var
+R2993:2996 Coq.Init.Datatypes <> true constr
+def 3152:3164 <> option_nat_eq
+R3174:3179 Coq.Init.Datatypes <> option ind
+R3181:3183 Coq.Init.Datatypes <> nat ind
+binder 3167:3168 <> o1:8
+binder 3170:3171 <> o2:9
+R3188:3191 Coq.Init.Datatypes <> bool ind
+R3212:3213 coq_intro.b1 <> o2:9 var
+R3208:3209 coq_intro.b1 <> o1:8 var
+R3227:3230 Coq.Init.Datatypes <> Some constr
+R3237:3240 Coq.Init.Datatypes <> Some constr
+R3249:3254 coq_intro.b1 <> nat_eq def
+R3271:3274 Coq.Init.Datatypes <> None constr
+R3277:3280 Coq.Init.Datatypes <> None constr
+R3285:3288 Coq.Init.Datatypes <> true constr
+R3305:3309 Coq.Init.Datatypes <> false constr
+var 3396:3414 Option option_nat_eq_tests
+R3419:3425 Coq.Lists.List <> forallb def
+R3467:3467 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R3491:3529 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R3564:3602 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R3634:3672 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R3468:3480 coq_intro.b1 <> option_nat_eq def
+R3482:3485 Coq.Init.Datatypes <> None constr
+R3487:3490 Coq.Init.Datatypes <> None constr
+R3530:3533 Coq.Init.Datatypes <> negb def
+R3536:3548 coq_intro.b1 <> option_nat_eq def
+R3551:3554 Coq.Init.Datatypes <> Some constr
+R3559:3562 Coq.Init.Datatypes <> None constr
+R3603:3615 coq_intro.b1 <> option_nat_eq def
+R3618:3621 Coq.Init.Datatypes <> Some constr
+R3627:3630 Coq.Init.Datatypes <> Some constr
+R3427:3428 Coq.Init.Datatypes <> id def
+var 3683:3706 Option option_nat_eq_tests_pass
+R3728:3730 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3709:3727 coq_intro.b1 <> Option.option_nat_eq_tests var
+R3731:3734 Coq.Init.Datatypes <> true constr
+R3800:3805 coq_intro.b1 Option <> sec
+sec 3817:3822 <> FunUpd
+def 4211:4213 <> upd
+binder 4216:4216 <> V:12
+R4232:4235 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4229:4231 Coq.Init.Datatypes <> nat ind
+R4236:4236 coq_intro.b1 <> V:12 var
+binder 4226:4226 <> f:13
+R4243:4245 Coq.Init.Datatypes <> nat ind
+binder 4240:4240 <> x:14
+R4252:4252 coq_intro.b1 <> V:12 var
+binder 4249:4249 <> y:15
+R4259:4262 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4256:4258 Coq.Init.Datatypes <> nat ind
+R4263:4263 coq_intro.b1 <> V:12 var
+binder 4277:4277 <> z:16
+R4286:4291 coq_intro.b1 <> nat_eq def
+R4293:4293 coq_intro.b1 <> z:16 var
+R4295:4295 coq_intro.b1 <> x:14 var
+R4311:4311 coq_intro.b1 <> f:13 var
+R4313:4313 coq_intro.b1 <> z:16 var
+R4303:4303 coq_intro.b1 <> y:15 var
+var 4395:4403 FunUpd upd_tests
+R4408:4414 Coq.Lists.List <> forallb def
+R4446:4476 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4502:4532 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4568:4598 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4628:4658 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4695:4723 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4477:4482 coq_intro.b1 <> nat_eq def
+R4486:4488 coq_intro.b1 <> upd def
+R4490:4491 Coq.Init.Datatypes <> id def
+R4533:4538 coq_intro.b1 <> nat_eq def
+R4542:4544 coq_intro.b1 <> upd def
+R4547:4549 coq_intro.b1 <> upd def
+R4551:4552 Coq.Init.Datatypes <> id def
+R4599:4604 coq_intro.b1 <> nat_eq def
+R4608:4610 coq_intro.b1 <> upd def
+R4612:4613 Coq.Init.Datatypes <> id def
+R4659:4664 coq_intro.b1 <> nat_eq def
+R4668:4670 coq_intro.b1 <> upd def
+R4673:4675 coq_intro.b1 <> upd def
+R4677:4678 Coq.Init.Datatypes <> id def
+R4416:4417 Coq.Init.Datatypes <> id def
+var 4734:4747 FunUpd upd_tests_pass
+R4759:4761 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4750:4758 coq_intro.b1 <> FunUpd.upd_tests var
+R4762:4765 Coq.Init.Datatypes <> true constr
+R4794:4799 coq_intro.b1 FunUpd <> sec
+sec 4813:4819 <> NatDict
+binder 5292:5292 <> V:17
+def 5786:5797 <> nat_dict_fun
+R5805:5808 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5802:5804 Coq.Init.Datatypes <> nat ind
+R5809:5814 Coq.Init.Datatypes <> option ind
+R5816:5816 coq_intro.b1 <> NatDict.V var
+R5827:5838 coq_intro.b1 <> nat_dict_fun def
+def 5951:5959 <> new_dict'
+R5963:5974 coq_intro.b1 <> nat_dict_fun def
+binder 5983:5983 <> x:18
+R5988:5991 Coq.Init.Datatypes <> None constr
+def 6136:6142 <> insert'
+R6148:6159 coq_intro.b1 <> nat_dict_fun def
+binder 6145:6145 <> d:19
+R6166:6168 Coq.Init.Datatypes <> nat ind
+binder 6163:6163 <> k:20
+R6175:6175 coq_intro.b1 <> NatDict.V var
+binder 6172:6172 <> v:21
+R6180:6191 coq_intro.b1 <> nat_dict_fun def
+binder 6203:6205 <> key:22
+R6214:6219 coq_intro.b1 <> nat_eq def
+R6221:6221 coq_intro.b1 <> k:20 var
+R6223:6225 coq_intro.b1 <> key:22 var
+R6248:6248 coq_intro.b1 <> d:19 var
+R6250:6252 coq_intro.b1 <> key:22 var
+R6234:6237 Coq.Init.Datatypes <> Some constr
+R6239:6239 coq_intro.b1 <> v:21 var
+def 6380:6386 <> remove'
+R6392:6403 coq_intro.b1 <> nat_dict_fun def
+binder 6389:6389 <> d:23
+R6410:6412 Coq.Init.Datatypes <> nat ind
+binder 6407:6407 <> k:24
+R6417:6428 coq_intro.b1 <> nat_dict_fun def
+binder 6440:6442 <> key:25
+R6451:6456 coq_intro.b1 <> nat_eq def
+R6458:6458 coq_intro.b1 <> k:24 var
+R6460:6462 coq_intro.b1 <> key:25 var
+R6481:6481 coq_intro.b1 <> d:23 var
+R6483:6485 coq_intro.b1 <> key:25 var
+R6470:6473 Coq.Init.Datatypes <> None constr
+def 6922:6925 <> get'
+R6931:6942 coq_intro.b1 <> nat_dict_fun def
+binder 6928:6928 <> d:26
+R6949:6951 Coq.Init.Datatypes <> nat ind
+binder 6946:6946 <> k:27
+R6956:6961 Coq.Init.Datatypes <> option ind
+R6963:6963 coq_intro.b1 <> NatDict.V var
+R6970:6970 coq_intro.b1 <> d:26 var
+R6972:6972 coq_intro.b1 <> k:27 var
+def 7220:7228 <> contains'
+R7234:7245 coq_intro.b1 <> nat_dict_fun def
+binder 7231:7231 <> d:28
+R7252:7254 Coq.Init.Datatypes <> nat ind
+binder 7249:7249 <> k:29
+R7258:7261 Coq.Init.Datatypes <> bool ind
+R7266:7273 coq_intro.b1 <> has_some def
+R7276:7276 coq_intro.b1 <> d:28 var
+R7278:7278 coq_intro.b1 <> k:29 var
+R7360:7366 coq_intro.b1 NatDict <> sec
+sec 7378:7389 <> NatDictTests
+R7401:7412 coq_intro.b1 <> nat_dict_fun def
+var 7585:7589 NatDictTests tests
+R7752:7760 coq_intro.b1 <> new_dict' def
+R7762:7764 Coq.Init.Datatypes <> nat ind
+binder 7744:7746 <> new:30
+R7785:7791 coq_intro.b1 <> insert' def
+R7793:7795 coq_intro.b1 <> new:30 var
+binder 7777:7780 <> ins5:31
+R7825:7831 coq_intro.b1 <> insert' def
+R7833:7836 coq_intro.b1 <> ins5:31 var
+binder 7813:7820 <> ins5ins5:32
+R7865:7871 coq_intro.b1 <> remove' def
+R7873:7876 coq_intro.b1 <> ins5:31 var
+binder 7854:7860 <> ins5rm5:33
+R7906:7912 coq_intro.b1 <> remove' def
+R7914:7921 coq_intro.b1 <> ins5ins5:32 var
+binder 7891:7901 <> ins5ins5rm5:34
+R7932:7938 Coq.Lists.List <> forallb def
+R7966:7993 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8016:8042 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8059:8085 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8106:8132 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8159:8185 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8216:8242 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8274:8300 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8338:8364 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8406:8432 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8472:8498 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8531:8555 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R7994:7997 Coq.Init.Datatypes <> negb def
+R8000:8008 coq_intro.b1 <> contains' def
+R8010:8012 coq_intro.b1 <> new:30 var
+R8043:8051 coq_intro.b1 <> contains' def
+R8053:8056 coq_intro.b1 <> ins5:31 var
+R8086:8094 coq_intro.b1 <> contains' def
+R8096:8103 coq_intro.b1 <> ins5ins5:32 var
+R8133:8136 Coq.Init.Datatypes <> negb def
+R8139:8147 coq_intro.b1 <> contains' def
+R8149:8155 coq_intro.b1 <> ins5rm5:33 var
+R8186:8189 Coq.Init.Datatypes <> negb def
+R8192:8200 coq_intro.b1 <> contains' def
+R8202:8212 coq_intro.b1 <> ins5ins5rm5:34 var
+R8243:8255 coq_intro.b1 <> option_nat_eq def
+R8258:8261 coq_intro.b1 <> get' def
+R8263:8265 coq_intro.b1 <> new:30 var
+R8270:8273 Coq.Init.Datatypes <> None constr
+R8301:8313 coq_intro.b1 <> option_nat_eq def
+R8316:8319 coq_intro.b1 <> get' def
+R8321:8324 coq_intro.b1 <> ins5:31 var
+R8330:8333 Coq.Init.Datatypes <> Some constr
+R8365:8377 coq_intro.b1 <> option_nat_eq def
+R8380:8383 coq_intro.b1 <> get' def
+R8385:8392 coq_intro.b1 <> ins5ins5:32 var
+R8398:8401 Coq.Init.Datatypes <> Some constr
+R8433:8445 coq_intro.b1 <> option_nat_eq def
+R8448:8451 coq_intro.b1 <> get' def
+R8453:8463 coq_intro.b1 <> ins5ins5rm5:34 var
+R8468:8471 Coq.Init.Datatypes <> None constr
+R8499:8511 coq_intro.b1 <> option_nat_eq def
+R8514:8517 coq_intro.b1 <> get' def
+R8519:8522 coq_intro.b1 <> ins5:31 var
+R8527:8530 Coq.Init.Datatypes <> None constr
+R7940:7941 Coq.Init.Datatypes <> id def
+var 8565:8587 NatDictTests nat_dict_fun_tests_pass
+R8595:8597 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8590:8594 coq_intro.b1 <> NatDictTests.tests var
+R8598:8601 Coq.Init.Datatypes <> true constr
+R8632:8643 coq_intro.b1 NatDictTests <> sec
+sec 8656:8663 <> NatDict'
+binder 8677:8677 <> V:35
+def 8984:8996 <> nat_dict_list
+R9001:9004 Coq.Init.Datatypes <> list ind
+R9010:9012 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R9007:9009 Coq.Init.Datatypes <> nat ind
+R9013:9013 coq_intro.b1 <> NatDict'.V var
+def 9233:9242 <> new_dict''
+R9246:9258 coq_intro.b1 <> nat_dict_list def
+R9263:9264 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+def 9383:9390 <> insert''
+R9396:9408 coq_intro.b1 <> nat_dict_list def
+binder 9393:9393 <> d:36
+R9415:9417 Coq.Init.Datatypes <> nat ind
+binder 9412:9412 <> k:37
+R9424:9424 coq_intro.b1 <> NatDict'.V var
+binder 9421:9421 <> v:38
+R9429:9441 coq_intro.b1 <> nat_dict_list def
+R9453:9456 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9446:9446 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9448:9450 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9452:9452 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9447:9447 coq_intro.b1 <> k:37 var
+R9451:9451 coq_intro.b1 <> v:38 var
+R9457:9457 coq_intro.b1 <> d:36 var
+def 9888:9895 <> remove''
+R9901:9913 coq_intro.b1 <> nat_dict_list def
+binder 9898:9898 <> d:39
+R9920:9922 Coq.Init.Datatypes <> nat ind
+binder 9917:9917 <> k:40
+R9927:9939 coq_intro.b1 <> nat_dict_list def
+R9957:9957 coq_intro.b1 <> d:39 var
+R9979:9982 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9972:9972 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9975:9976 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9978:9978 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9992:9997 coq_intro.b1 <> nat_eq def
+R10002:10002 coq_intro.b1 <> k:40 var
+R10035:10039 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10053:10053 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10028:10028 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10031:10032 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10034:10034 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10040:10047 coq_intro.b1 <> remove'':41 def
+R10052:10052 coq_intro.b1 <> k:40 var
+R10009:10016 coq_intro.b1 <> remove'':41 def
+R10021:10021 coq_intro.b1 <> k:40 var
+R10162:10163 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R10168:10169 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+def 10325:10329 <> get''
+R10335:10347 coq_intro.b1 <> nat_dict_list def
+binder 10332:10332 <> d:43
+R10354:10356 Coq.Init.Datatypes <> nat ind
+binder 10351:10351 <> k:44
+R10361:10366 Coq.Init.Datatypes <> option ind
+R10368:10368 coq_intro.b1 <> NatDict'.V var
+R10384:10384 coq_intro.b1 <> d:43 var
+R10405:10408 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10398:10398 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10401:10402 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10404:10404 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10418:10423 coq_intro.b1 <> nat_eq def
+R10428:10428 coq_intro.b1 <> k:44 var
+R10447:10451 coq_intro.b1 <> get'':45 def
+R10456:10456 coq_intro.b1 <> k:44 var
+R10435:10438 Coq.Init.Datatypes <> Some constr
+R10470:10473 Coq.Init.Datatypes <> None constr
+def 10611:10620 <> contains''
+R10626:10638 coq_intro.b1 <> nat_dict_list def
+binder 10623:10623 <> d:47
+R10645:10647 Coq.Init.Datatypes <> nat ind
+binder 10642:10642 <> k:48
+R10651:10654 Coq.Init.Datatypes <> bool ind
+R10667:10667 coq_intro.b1 <> d:47 var
+R10685:10688 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10678:10678 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10681:10682 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10684:10684 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10698:10703 coq_intro.b1 <> nat_eq def
+R10708:10708 coq_intro.b1 <> k:48 var
+R10725:10734 coq_intro.b1 <> contains'':49 def
+R10739:10739 coq_intro.b1 <> k:48 var
+R10715:10718 Coq.Init.Datatypes <> true constr
+R10750:10754 Coq.Init.Datatypes <> false constr
+R10841:10848 coq_intro.b1 NatDict' <> sec
+sec 10860:10872 <> NatDict'Tests
+var 10954:10958 NatDict'Tests tests
+R10979:10988 coq_intro.b1 <> new_dict'' def
+R10990:10992 Coq.Init.Datatypes <> nat ind
+binder 10971:10973 <> new:51
+R11013:11020 coq_intro.b1 <> insert'' def
+R11022:11024 coq_intro.b1 <> new:51 var
+binder 11005:11008 <> ins5:52
+R11054:11061 coq_intro.b1 <> insert'' def
+R11063:11066 coq_intro.b1 <> ins5:52 var
+binder 11042:11049 <> ins5ins5:53
+R11095:11102 coq_intro.b1 <> remove'' def
+R11104:11107 coq_intro.b1 <> ins5:52 var
+binder 11084:11090 <> ins5rm5:54
+R11137:11144 coq_intro.b1 <> remove'' def
+R11146:11153 coq_intro.b1 <> ins5ins5:53 var
+binder 11122:11132 <> ins5ins5rm5:55
+R11164:11170 Coq.Lists.List <> forallb def
+R11198:11225 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11249:11275 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11293:11319 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11341:11367 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11395:11421 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11453:11479 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11512:11538 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11577:11603 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11646:11672 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11713:11739 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11773:11797 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11226:11229 Coq.Init.Datatypes <> negb def
+R11232:11241 coq_intro.b1 <> contains'' def
+R11243:11245 coq_intro.b1 <> new:51 var
+R11276:11285 coq_intro.b1 <> contains'' def
+R11287:11290 coq_intro.b1 <> ins5:52 var
+R11320:11329 coq_intro.b1 <> contains'' def
+R11331:11338 coq_intro.b1 <> ins5ins5:53 var
+R11368:11371 Coq.Init.Datatypes <> negb def
+R11374:11383 coq_intro.b1 <> contains'' def
+R11385:11391 coq_intro.b1 <> ins5rm5:54 var
+R11422:11425 Coq.Init.Datatypes <> negb def
+R11428:11437 coq_intro.b1 <> contains'' def
+R11439:11449 coq_intro.b1 <> ins5ins5rm5:55 var
+R11480:11492 coq_intro.b1 <> option_nat_eq def
+R11495:11499 coq_intro.b1 <> get'' def
+R11501:11503 coq_intro.b1 <> new:51 var
+R11508:11511 Coq.Init.Datatypes <> None constr
+R11539:11551 coq_intro.b1 <> option_nat_eq def
+R11554:11558 coq_intro.b1 <> get'' def
+R11560:11563 coq_intro.b1 <> ins5:52 var
+R11569:11572 Coq.Init.Datatypes <> Some constr
+R11604:11616 coq_intro.b1 <> option_nat_eq def
+R11619:11623 coq_intro.b1 <> get'' def
+R11625:11632 coq_intro.b1 <> ins5ins5:53 var
+R11638:11641 Coq.Init.Datatypes <> Some constr
+R11673:11685 coq_intro.b1 <> option_nat_eq def
+R11688:11692 coq_intro.b1 <> get'' def
+R11694:11704 coq_intro.b1 <> ins5ins5rm5:55 var
+R11709:11712 Coq.Init.Datatypes <> None constr
+R11740:11752 coq_intro.b1 <> option_nat_eq def
+R11755:11759 coq_intro.b1 <> get'' def
+R11761:11764 coq_intro.b1 <> ins5:52 var
+R11769:11772 Coq.Init.Datatypes <> None constr
+R11172:11173 Coq.Init.Datatypes <> id def
+var 11807:11830 NatDict'Tests nat_dict_list_tests_pass
+R11838:11840 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11833:11837 coq_intro.b1 <> NatDict'Tests.tests var
+R11841:11844 Coq.Init.Datatypes <> true constr
+R11875:11887 coq_intro.b1 NatDict'Tests <> sec
+sec 12209:12219 <> DictGeneral
+rec 12378:12381 <> Dict
+proj 12392:12392 <> D
+proj 12414:12421 <> new_dict
+proj 12451:12456 <> insert
+proj 12509:12514 <> remove
+proj 12562:12564 <> get
+proj 12615:12622 <> contains
+R12399:12402 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+binder 12432:12432 <> V:58
+R12442:12442 coq_intro.b1 <> D:57 meth
+R12444:12444 coq_intro.b1 <> V:58 var
+binder 12467:12467 <> V:60
+R12477:12477 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12481:12485 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12478:12478 coq_intro.b1 <> D:57 meth
+R12480:12480 coq_intro.b1 <> V:60 var
+R12489:12492 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12486:12488 Coq.Init.Datatypes <> nat ind
+R12494:12498 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12502:12502 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12493:12493 coq_intro.b1 <> V:60 var
+R12499:12499 coq_intro.b1 <> D:57 meth
+R12501:12501 coq_intro.b1 <> V:60 var
+binder 12525:12525 <> V:62
+R12535:12535 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12539:12543 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12536:12536 coq_intro.b1 <> D:57 meth
+R12538:12538 coq_intro.b1 <> V:62 var
+R12547:12551 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12555:12555 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12544:12546 Coq.Init.Datatypes <> nat ind
+R12552:12552 coq_intro.b1 <> D:57 meth
+R12554:12554 coq_intro.b1 <> V:62 var
+binder 12575:12575 <> V:64
+R12585:12585 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12589:12593 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12586:12586 coq_intro.b1 <> D:57 meth
+R12588:12588 coq_intro.b1 <> V:64 var
+R12597:12600 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12594:12596 Coq.Init.Datatypes <> nat ind
+R12601:12606 Coq.Init.Datatypes <> option ind
+R12608:12608 coq_intro.b1 <> V:64 var
+binder 12633:12633 <> V:66
+R12643:12643 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12647:12651 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12644:12644 coq_intro.b1 <> D:57 meth
+R12646:12646 coq_intro.b1 <> V:66 var
+R12655:12658 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12652:12654 Coq.Init.Datatypes <> nat ind
+R12659:12662 Coq.Init.Datatypes <> bool ind
+var 12812:12821 DictGeneral dict_tests
+R12834:12837 coq_intro.b1 <> Dict class
+binder 12824:12831 <> DictImpl:68
+R12842:12845 Coq.Init.Datatypes <> bool ind
+R12866:12873 coq_intro.b1 <> new_dict meth
+R12875:12882 coq_intro.b1 <> DictImpl:68 var
+R12884:12886 Coq.Init.Datatypes <> nat ind
+binder 12858:12860 <> new:69
+R12907:12912 coq_intro.b1 <> insert meth
+R12914:12916 coq_intro.b1 <> new:69 var
+binder 12899:12902 <> ins5:70
+R12946:12951 coq_intro.b1 <> insert meth
+R12953:12956 coq_intro.b1 <> ins5:70 var
+binder 12934:12941 <> ins5ins5:71
+R12985:12990 coq_intro.b1 <> remove meth
+R12992:12995 coq_intro.b1 <> ins5:70 var
+binder 12974:12980 <> ins5rm5:72
+R13025:13030 coq_intro.b1 <> remove meth
+R13032:13039 coq_intro.b1 <> ins5ins5:71 var
+binder 13010:13020 <> ins5ins5rm5:73
+R13050:13056 Coq.Lists.List <> forallb def
+R13084:13110 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13132:13158 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13174:13200 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13220:13246 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13272:13298 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13328:13354 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13385:13411 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13448:13474 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13515:13541 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13580:13606 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13638:13662 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R13111:13114 Coq.Init.Datatypes <> negb def
+R13117:13124 coq_intro.b1 <> contains meth
+R13126:13128 coq_intro.b1 <> new:69 var
+R13159:13166 coq_intro.b1 <> contains meth
+R13168:13171 coq_intro.b1 <> ins5:70 var
+R13201:13208 coq_intro.b1 <> contains meth
+R13210:13217 coq_intro.b1 <> ins5ins5:71 var
+R13247:13250 Coq.Init.Datatypes <> negb def
+R13253:13260 coq_intro.b1 <> contains meth
+R13262:13268 coq_intro.b1 <> ins5rm5:72 var
+R13299:13302 Coq.Init.Datatypes <> negb def
+R13305:13312 coq_intro.b1 <> contains meth
+R13314:13324 coq_intro.b1 <> ins5ins5rm5:73 var
+R13355:13367 coq_intro.b1 <> option_nat_eq def
+R13370:13372 coq_intro.b1 <> get meth
+R13374:13376 coq_intro.b1 <> new:69 var
+R13381:13384 Coq.Init.Datatypes <> None constr
+R13412:13424 coq_intro.b1 <> option_nat_eq def
+R13427:13429 coq_intro.b1 <> get meth
+R13431:13434 coq_intro.b1 <> ins5:70 var
+R13440:13443 Coq.Init.Datatypes <> Some constr
+R13475:13487 coq_intro.b1 <> option_nat_eq def
+R13490:13492 coq_intro.b1 <> get meth
+R13494:13501 coq_intro.b1 <> ins5ins5:71 var
+R13507:13510 Coq.Init.Datatypes <> Some constr
+R13542:13554 coq_intro.b1 <> option_nat_eq def
+R13557:13559 coq_intro.b1 <> get meth
+R13561:13571 coq_intro.b1 <> ins5ins5rm5:73 var
+R13576:13579 Coq.Init.Datatypes <> None constr
+R13607:13619 coq_intro.b1 <> option_nat_eq def
+R13622:13624 coq_intro.b1 <> get meth
+R13626:13629 coq_intro.b1 <> ins5:70 var
+R13634:13637 Coq.Init.Datatypes <> None constr
+R13058:13059 Coq.Init.Datatypes <> id def
+R14193:14203 coq_intro.b1 DictGeneral <> sec

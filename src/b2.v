@@ -38,13 +38,11 @@ Section IfProofs.
   
   Lemma if_true_helper {A: Type} (b: bool) (a1 a2: A) (TRUE: b = true):
     (if b then a1 else a2) = a1.
-  Proof.
-Admitted.
+  Proof . rewrite TRUE. reflexivity. Qed.
 
   Lemma if_false_helper {A: Type} (b: bool) (a1 a2: A) (FALSE: b = false):
     (if b then a1 else a2) = a2.
-  Proof.
-Admitted.
+  Proof. rewrite FALSE. reflexivity. Qed.
 
 End IfProofs.
 
@@ -78,8 +76,11 @@ Section LogicProofs.
      To select the next goal, use '-' (see the proof above). *)
   Lemma bool_true_or_false (b: bool):
     b = true \/ b = false.
-  Proof.
-Admitted.
+  Proof. 
+    destruct b.
+    - left. reflexivity.
+    - right. reflexivity.
+    Qed.
   
   (* Show the equivalence of two notions of boolean being false. 
      An equivalence can be proven by showing two corresponding implications.
@@ -87,10 +88,21 @@ Admitted.
      Remember that you can use general-purpose tactics with 'in' modifier
      which allows to perform the corresponding action in the proof context. 
 *)
+
   Lemma false_is_not_true (b: bool):
     b = false <-> b <> true.
   Proof.
-Admitted.
+    unfold iff.
+    split.
+    {
+      destruct b.
+      - discriminate. 
+      - discriminate.
+    }
+      destruct b.
+      - intros H. unfold not in H. exfalso. apply H. reflexivity.
+      - reflexivity.
+  Qed.
   
 End LogicProofs.   
 
@@ -100,7 +112,7 @@ Section NatEqProofs.
   Lemma nat_eq_refl (n: nat):
     nat_eq n n = true.
   Proof.
-    induction n as [| n IHn].
+    induction n.
     { simpl. reflexivity. }
     simpl. apply IHn. 
   Qed.
@@ -112,8 +124,18 @@ Section NatEqProofs.
   (* So far we're only able to prove the half of the specification. *)
   Lemma eq_implies_nat_eq (n1 n2: nat):
     n1 = n2 -> nat_eq n1 n2 = true.
-  Proof.
-Admitted.
+  Proof. 
+    (* induction n1.
+  {
+   intros H. simpl. destruct n2; auto.  inversion H.
+  }
+  {
+    intros. destruct n2; simpl. 
+    { exfalso. inversion H. }
+    - inversion H. simpl. apply nat_eq_refl. 
+  } Qed. *)
+  intros H. rewrite H. apply nat_eq_refl. Qed.
+  
   
   (* This part of the specification, again, involves induction. *)
   Lemma nat_eq_implies_eq (n1 n2: nat):
@@ -129,8 +151,9 @@ Admitted.
   (* Finally, this is the specification of 'nat_eq'. *)
   Lemma nat_eq_spec (n1 n2: nat):
     nat_eq n1 n2 = true <-> n1 = n2.
-  Proof.
-Admitted.
+  Proof. unfold iff . split.
+  {apply nat_eq_implies_eq. }
+  apply eq_implies_nat_eq. Qed.
 
   (* This is an obvious reformulation of 'nat_eq' specification.
      The specification, however, cannot be directly applied to prove this version.
@@ -145,8 +168,9 @@ Admitted.
  *)
   Lemma nat_eq_neg_spec (n1 n2: nat):
     nat_eq n1 n2 = false <-> n1 <> n2.
-  Proof.
-Admitted.
+  Proof. apply (@iff_trans (nat_eq n1 n2 = false) (nat_eq n1 n2 <> true)  (n1 <> n2)).
+  - unfold iff . split; apply false_is_not_true.
+  - rewrite nat_eq_spec. reflexivity. Qed.
 
   (* After you've proved the statement above, read about the 'eapply' tactic.
      The usage of 'eapply' allows to avoid specifying 
@@ -164,15 +188,13 @@ Section UpdProofs.
   (* To exploit the term definition, use 'unfold' tactic. *)
   Lemma update_latest (f: nat -> V) (n: nat) (v: V):
     (upd f n v) n = v.
-  Proof.
-Admitted.
+  Proof. unfold upd. rewrite nat_eq_refl. reflexivity. Qed.
 
   (* Prove that update affect only one value *)
   (* Use the helper lemma for 'if'.  *)
   Lemma update_others (f: nat -> V) (n: nat) (v: V) (n': nat) (NEQ: n <> n'):
     (upd f n v) n' = f n'.
-  Proof.
-Admitted.
+  Proof. unfold upd. apply if_false_helper. apply nat_eq_neg_spec. auto. Qed.    
 
 End UpdProofs. 
 
@@ -183,43 +205,54 @@ Section NatDictProofs.
   (* Prove that new dictionary actually contains nothing. *)
   Lemma new_dict_empty (n: nat):
     contains' (@new_dict' V) n = false.
-  Proof.
-Admitted.
+  Proof. unfold contains'. unfold has_some. unfold new_dict'. auto. Qed.
 
   (* Prove that the inserted value gets retrieved *)
   Lemma insert_latest (d: @nat_dict_fun V) (n: nat) (v: V):
     get' (insert' d n v) n = Some v.
-  Proof.
-Admitted.
+  Proof. unfold get'. unfold insert'. rewrite nat_eq_refl. auto. Qed.
 
   (* Prove that removed key is no more contained in the dict *)
   Lemma removed_not_contained (d: @nat_dict_fun V) (n: nat):
     contains' (remove' d n) n = false.
-  Proof.
-Admitted.
+  Proof. unfold contains'.  unfold remove'. rewrite nat_eq_refl. unfold has_some. auto. Qed.
 
 
   (* Prove that insert doesn't affect other values *)
   Lemma insert_others (d: @nat_dict_fun V) (n: nat) (v: V) (n': nat) (NEQ: n <> n'):
     get' (insert' d n v) n' = get' d n'. 
-  Proof.
-Admitted.
+  Proof. unfold get'. unfold insert'.  apply nat_eq_neg_spec in NEQ. rewrite NEQ. auto. Qed.
+
+
+  Lemma eq_sym_own{A: Type} (n1 n2:A):
+    n1 = n2 <-> n2 = n1.
+  Proof. unfold iff. split; auto. Qed.
+
+
+  Lemma nat_qe_sym (n1 n2:nat):
+    nat_eq n1 n2 = nat_eq n2 n1.
+    Proof. destruct(nat_eq n1 n2) eqn:H1.
+    - apply nat_eq_spec in H1. rewrite H1. rewrite nat_eq_refl. auto.  
+    - apply nat_eq_neg_spec in H1.  apply eq_sym_own. apply nat_eq_neg_spec. auto. Qed.
 
   (* Prove that updating a dictionary with a value it already has yields the same dictionary *)
   (* You may want to prove an helper lemma beforehand. *)
   (* Also, remember that 'destruct' can be used not only on variables, 
      but also on an arbitrary term.
      It can be used to separate cases when insert does matter and doesn't. *)
-  Lemma insert_same (d: @nat_dict_fun V) (n: nat) (v: V)
+  Lemma insert_same (d: @nat_dict_fun V) (n: nat) (v: V) 
         (HAD_V: get' d n = Some v):
     forall n', get' (insert' d n v) n' = get' d n'. 
-  Proof.
-Admitted.
+  Proof. unfold get'. unfold insert'.  intros. unfold get' in HAD_V.  destruct(nat_eq n n')  eqn:H1.
+  - apply nat_eq_spec in H1. apply eq_sym_own in H1. rewrite H1.  apply eq_sym_own. apply HAD_V.
+  - auto. Qed. 
 
   (* Prove that inserting a value twice is the same as inserting it once *)
   Lemma insert_twice (d: @nat_dict_fun V) (n: nat) (v: V):
     forall n', get' (insert' (insert' d n v) n v) n' = get' (insert' d n v) n'. 
-  Proof.
-Admitted.
+  Proof. unfold get'. unfold insert'. intros.  destruct(nat_eq n n');auto. Qed. 
 
+
+  
+    
 End NatDictProofs. 

@@ -22,9 +22,10 @@ Admitted.
 
   (* Define a mapping function similar to one defined for regular lists.
      It should replace values stored in dict but keep them under the same keys. *)
-  Fixpoint map'' {W: Type} (f: V -> W) (d: @nat_dict_list V): @nat_dict_list W :=
+  Fixpoint map'' {W: Type} (f: V -> W) (d: @nat_dict_list V): @nat_dict_list W .
       (* place your code here *)
-  .
+Admitted.
+  
       
   (* Prove that a value stored in a mapped dict 
      requires a corresponding value stored in an original dict. *)

@@ -1,0 +1,67 @@
+DIGEST 779a75fd72d34a72d439c90587312248
+Fcoq_intro.b3
+R187:188 coq_intro.b1 <> <> lib
+R206:207 coq_intro.b2 <> <> lib
+R225:228 Coq.Lists.List <> <> lib
+sec 263:276 <> NatDict'Proofs
+binder 290:290 <> V:1
+prf 592:612 <> removed_not_contained
+R619:631 coq_intro.b1 <> nat_dict_list def
+R633:633 coq_intro.b3 <> NatDict'Proofs.V var
+binder 615:615 <> d:2
+R640:642 Coq.Init.Datatypes <> nat ind
+binder 637:637 <> n:3
+R677:679 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R650:659 coq_intro.b1 <> contains'' def
+R662:669 coq_intro.b1 <> remove'' def
+R671:671 coq_intro.b3 <> d:2 var
+R673:673 coq_intro.b3 <> n:3 var
+R676:676 coq_intro.b3 <> n:3 var
+R680:684 Coq.Init.Datatypes <> false constr
+def 874:878 <> map''
+binder 881:881 <> W:4
+R895:898 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R894:894 coq_intro.b3 <> NatDict'Proofs.V var
+R899:899 coq_intro.b3 <> W:4 var
+binder 891:891 <> f:5
+R907:919 coq_intro.b1 <> nat_dict_list def
+R921:921 coq_intro.b3 <> NatDict'Proofs.V var
+binder 903:903 <> d:6
+R926:938 coq_intro.b1 <> nat_dict_list def
+R940:940 coq_intro.b3 <> W:4 var
+prf 1121:1132 <> dict_map_get
+binder 1135:1135 <> W:8
+R1149:1152 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1148:1148 coq_intro.b3 <> NatDict'Proofs.V var
+R1153:1153 coq_intro.b3 <> W:8 var
+binder 1145:1145 <> m:9
+R1161:1173 coq_intro.b1 <> nat_dict_list def
+R1175:1175 coq_intro.b3 <> NatDict'Proofs.V var
+binder 1157:1157 <> d:10
+binder 1190:1190 <> n:11
+binder 1192:1192 <> w:12
+R1201:1201 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R1230:1242 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R1282:1282 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R1221:1223 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1202:1206 coq_intro.b1 <> get'' def
+R1209:1213 coq_intro.b3 <> map'' prfax
+R1217:1217 coq_intro.b3 <> d:10 var
+R1215:1215 coq_intro.b3 <> m:9 var
+R1220:1220 coq_intro.b3 <> n:11 var
+R1224:1227 Coq.Init.Datatypes <> Some constr
+R1229:1229 coq_intro.b3 <> w:12 var
+R1243:1249 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1251:1252 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 1250:1250 <> v:13
+R1271:1274 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R1262:1264 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1253:1257 coq_intro.b1 <> get'' def
+R1259:1259 coq_intro.b3 <> d:10 var
+R1261:1261 coq_intro.b3 <> n:11 var
+R1265:1268 Coq.Init.Datatypes <> Some constr
+R1270:1270 coq_intro.b3 <> v:13 var
+R1278:1280 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1275:1275 coq_intro.b3 <> m:9 var
+R1277:1277 coq_intro.b3 <> v:13 var
+R1281:1281 coq_intro.b3 <> w:12 var
