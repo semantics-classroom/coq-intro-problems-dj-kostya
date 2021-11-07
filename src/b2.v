@@ -47,7 +47,7 @@ Section IfProofs.
 End IfProofs.
 
 Section LogicProofs.
-
+  Print insert''.
   Lemma neg_equiv (P Q: Prop) (EQUIV: P <-> Q):
     not P <-> not Q.
   Proof.
@@ -222,6 +222,7 @@ Section NatDictProofs.
   Lemma insert_others (d: @nat_dict_fun V) (n: nat) (v: V) (n': nat) (NEQ: n <> n'):
     get' (insert' d n v) n' = get' d n'. 
   Proof. unfold get'. unfold insert'.  apply nat_eq_neg_spec in NEQ. rewrite NEQ. auto. Qed.
+  
 
 
   Lemma eq_sym_own{A: Type} (n1 n2:A):

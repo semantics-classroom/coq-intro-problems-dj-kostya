@@ -1,11 +1,13 @@
 (********************)
 
 (* Comments for students: *)
+(* https://github.com/semantics-classroom *)
 (* The final goal of the exercise is to implement a dictionary (aka map).
    We'll do this incrementally by defining auxiliary functions and testing them. *)
 
 
 Require Import List.
+Require Import Nat.
 Import ListNotations. 
 
 (* The mechanism of sections allows to modularize the proof in multiple ways.
@@ -235,8 +237,7 @@ Section NatDict'.
   Definition new_dict'' : nat_dict_list := [].
  (* Replace the previous line with ':= (your implementation) . ' *)
   
-  (* Implement the insertion *)
-  Definition insert'' (d: nat_dict_list) (k: nat) (v: V) : nat_dict_list := (k , v) :: d.
+  
  (* Replace the previous line with ':= (your implementation) . ' *)
   
   
@@ -245,30 +246,28 @@ Section NatDict'.
   (* You may find useful that a pattern to be matched can be complex: *)
   (*    '(k, v) :: d'     destructs the list into the head and tail (named d')
      and, additionally, destructs the head into the key 'k' and value 'v' *)  
+   Locate eqb.
   Fixpoint remove'' (d: nat_dict_list) (k: nat) : nat_dict_list  := 
      match d with
-      | (k', v) :: xs => if nat_eq k' k then remove'' xs k else (k', v) :: (remove'' xs k)
-      (* | (k, v ) :: xs => remove'' xs k
-      | (k', v') :: xs => (k', v') :: (remove'' xs k) *)
+      | (k', v) :: xs => if eqb k' k then remove'' xs k else (k', v) :: (remove'' xs k)
+      (* | (k, v ) :: xs => remove'' xs k *)
+      (* | (k', v') :: xs => (k', v') :: (remove'' xs k)  *)
       | [] => []
       (* | _ => [] *)
      end.
  (* Replace the previous line with ':= (your implementation) . ' *)
-
+   (* Implement the insertion *)
+  Definition insert'' (d: nat_dict_list) (k: nat) (v: V) : nat_dict_list := (k , v) :: (remove'' d k).
   (* Implement the retrieval function. *)
   Fixpoint get'' (d: nat_dict_list) (k: nat) : option V :=
      match d with
-     | (k', v) :: xs => if nat_eq k' k then Some v else get'' xs k
+     | (k', v) :: xs => if eqb k' k then Some v else get'' xs k
      | _ => None
      end.
  (* Replace the previous line with ':= (your implementation) . ' *)
 
   (* Implement the check for key presence. *)
-  Fixpoint contains'' (d: nat_dict_list) (k: nat): bool
-  := match d with
-  | (k', v) :: xs => if nat_eq k' k then true else contains'' xs k
-  | _ => false
-  end.
+  Definition  contains'' (d: nat_dict_list) (k: nat): bool:= has_some( get'' d k).
  (* Replace the previous line with ':= (your implementation) . ' *)
      
 End NatDict'.
@@ -350,8 +349,7 @@ Section DictGeneral.
      These lemmas, as before, should be proved just by 'tauto'. *)
      (* Instance fun_dict : Dict :=
      {
-        D := nat -> option Type;
-        new_dict := new_dict'
+        D := @nat_dict_fun
      }. *)
       (* place your code here *)
    
