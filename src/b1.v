@@ -1,11 +1,13 @@
 (********************)
 
 (* Comments for students: *)
+(* https://github.com/semantics-classroom *)
 (* The final goal of the exercise is to implement a dictionary (aka map).
    We'll do this incrementally by defining auxiliary functions and testing them. *)
 
 
 Require Import List.
+Require Import Nat.
 Import ListNotations. 
 
 (* The mechanism of sections allows to modularize the proof in multiple ways.
@@ -14,8 +16,17 @@ Section NatEq.
 
   (* Implement a function that checks the equality of two natural numbers. 
      Use pattern matching and recursion. *)
-  Fixpoint nat_eq (x y: nat): bool
-  . Admitted.
+  Fixpoint nat_eq (x y: nat): bool := 
+     match x, y with
+     | 0, 0 => true
+     | 0, y => false
+     | x, 0 => false
+     | S x', S y' => nat_eq x' y'
+     end.
+   
+     
+
+
  (* Replace the previous line with ':= (your implementation) . ' *)
 
   (* We're not _proving_ that our implementations are correct yet,
@@ -62,8 +73,8 @@ Section Option.
       | T1 => X1
       | T2 => X2
       end' *)
-  Definition has_some {A: Type} (o: option A) : bool
-  . Admitted.
+  Definition has_some {A: Type} (o: option A) : bool:=
+     (if o then true else false).
  (* Replace the previous line with ':= (your implementation) . ' *)
     
   Let has_some_tests := forallb id
@@ -80,8 +91,12 @@ Section Option.
 
   (* Implement a function that compares two optional natural numbers. *)
   (* Use the nat_eq you've defined before *)
-  Definition option_nat_eq (o1 o2: option nat) : bool
-  . Admitted.
+  Definition option_nat_eq (o1 o2: option nat) : bool := 
+     match o1, o2 with
+     | Some o1', Some o2' => nat_eq o1' o2'
+     | None, None => true
+     | _, _ => false
+     end.
  (* Replace the previous line with ':= (your implementation) . ' *)
 
   Let option_nat_eq_tests := forallb id
@@ -102,8 +117,8 @@ Section FunUpd.
   (* Here we'll only concentrate on functions whose input type is nat, 
      but which are still polymorphic on the output type. *)
   (* Implement the function update using if-then-else expression and nat_eq. *)
-  Definition upd {V: Type} (f: nat -> V) (x: nat) (y: V): nat -> V
-  . Admitted.
+  Definition upd {V: Type} (f: nat -> V) (x: nat) (y: V): nat -> V :=
+     fun z => if (nat_eq z x) then y else (f z). 
  (* Replace the previous line with ':= (your implementation) . ' *)
   
   Let upd_tests := forallb id
@@ -139,18 +154,17 @@ Section NatDict.
   Print nat_dict_fun. (* Note that here V is fixed *)
   
   (* Implement a function that creates an empty dictionary *)
-  Definition new_dict' : nat_dict_fun
-  . Admitted.
+  Definition new_dict' : nat_dict_fun := fun x => None.
  (* Replace the previous line with ':= (your implementation) . ' *)
   
   (* Implement an insertion using the 'upd' construct. *)
-  Definition insert' (d: nat_dict_fun) (k: nat) (v: V) : nat_dict_fun
-  . Admitted.
+  Definition insert' (d: nat_dict_fun) (k: nat) (v: V) : nat_dict_fun 
+  := fun key => if (nat_eq k key) then (Some v) else (d key).
  (* Replace the previous line with ':= (your implementation) . ' *)
   
   (* Implement a deletion similarly. *)
-  Definition remove' (d: nat_dict_fun) (k: nat) : nat_dict_fun
-  . Admitted.
+  Definition remove' (d: nat_dict_fun) (k: nat) : nat_dict_fun 
+  := fun key => if (nat_eq k key) then None else (d key).
  (* Replace the previous line with ':= (your implementation) . ' *)
   
   (* Implement a function that retrieves a value by key. *)
@@ -160,13 +174,13 @@ Section NatDict.
      if a dictionary (with an arbitrary implementation) doesn't contain a value,
      a retrieval method should somehow reflect it. *)
   Definition get' (d: nat_dict_fun) (k: nat) : option V
-  . Admitted.
+  := d k.
  (* Replace the previous line with ':= (your implementation) . ' *)
   
   (* Implement a function that checks the presence of a given key. *)
   (* You can either reuse existing dict methods or write an independent implementation. *)
-  Definition contains' (d: nat_dict_fun) (k: nat): bool
-  . Admitted.
+  Definition contains' (d: nat_dict_fun) (k: nat): bool := has_some (d k).
+  
  (* Replace the previous line with ':= (your implementation) . ' *)
   
 End NatDict.
@@ -220,13 +234,10 @@ Section NatDict'.
      some of them should also be inductively defined. *)
   
   (* Implement a function that creates an empty dictionary. *)
-  Definition new_dict'' : nat_dict_list
-  . Admitted.
+  Definition new_dict'' : nat_dict_list := [].
  (* Replace the previous line with ':= (your implementation) . ' *)
   
-  (* Implement the insertion *)
-  Definition insert'' (d: nat_dict_list) (k: nat) (v: V) : nat_dict_list
-  . Admitted.
+  
  (* Replace the previous line with ':= (your implementation) . ' *)
   
   
@@ -235,18 +246,28 @@ Section NatDict'.
   (* You may find useful that a pattern to be matched can be complex: *)
   (*    '(k, v) :: d'     destructs the list into the head and tail (named d')
      and, additionally, destructs the head into the key 'k' and value 'v' *)  
-  Fixpoint remove'' (d: nat_dict_list) (k: nat) : nat_dict_list
-  . Admitted.
+   Locate eqb.
+  Fixpoint remove'' (d: nat_dict_list) (k: nat) : nat_dict_list  := 
+     match d with
+      | (k', v) :: xs => if eqb k' k then remove'' xs k else (k', v) :: (remove'' xs k)
+      (* | (k, v ) :: xs => remove'' xs k *)
+      (* | (k', v') :: xs => (k', v') :: (remove'' xs k)  *)
+      | [] => []
+      (* | _ => [] *)
+     end.
  (* Replace the previous line with ':= (your implementation) . ' *)
-
+   (* Implement the insertion *)
+  Definition insert'' (d: nat_dict_list) (k: nat) (v: V) : nat_dict_list := (k , v) :: (remove'' d k).
   (* Implement the retrieval function. *)
-  Fixpoint get'' (d: nat_dict_list) (k: nat) : option V
-  . Admitted.
+  Fixpoint get'' (d: nat_dict_list) (k: nat) : option V :=
+     match d with
+     | (k', v) :: xs => if eqb k' k then Some v else get'' xs k
+     | _ => None
+     end.
  (* Replace the previous line with ':= (your implementation) . ' *)
 
   (* Implement the check for key presence. *)
-  Fixpoint contains'' (d: nat_dict_list) (k: nat): bool
-  . Admitted.
+  Definition  contains'' (d: nat_dict_list) (k: nat): bool:= has_some( get'' d k).
  (* Replace the previous line with ':= (your implementation) . ' *)
      
 End NatDict'.
@@ -326,7 +347,11 @@ Section DictGeneral.
   (* Then, state and prove 'fun_dict_tests' and 'list_dict_tests' lemmas
      by instantiating 'dict_tests' with instances you've just created. 
      These lemmas, as before, should be proved just by 'tauto'. *)
-
+     (* Instance fun_dict : Dict :=
+     {
+        D := @nat_dict_fun
+     }. *)
       (* place your code here *)
+   
  
 End DictGeneral.

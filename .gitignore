@@ -1,3 +1,6 @@
 *.aux
 *~
 *.
+src/*.glob
+src/*.vo*
+src/*.vl*
